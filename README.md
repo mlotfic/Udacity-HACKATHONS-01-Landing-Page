@@ -115,3 +115,39 @@ Sincerely,
 Mahmoud Lotfi
 
 ```
+
+# LensLight Photography
+
+Photography portfolio website built with HTML, CSS, and JavaScript.
+
+## Live Demo
+[View Live Demo](https://yourusername.github.io/your-repo-name)
+
+## Features
+
+- Responsive design
+- Image slider
+- Dark/light mode
+- Portfolio gallery
+- Contact form
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- Font Awesome
+
+## Repository Structure
+
+```css
+your-repo/
+        ├── index.html
+        ├── asset/
+        │   ├── img/
+        │   ├── scripts/
+        │   └── styles/
+        ├── README.md
+        └── .gitignore
+```
