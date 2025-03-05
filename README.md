@@ -121,7 +121,7 @@ Mahmoud Lotfi
 Photography portfolio website built with HTML, CSS, and JavaScript.
 
 ## Live Demo
-[View Live Demo](https://yourusername.github.io/your-repo-name)
+[View Live Demo](https://mlotfic.github.io/Udacity-HACKATHONS-01-Landing-Page)
 
 ## Features
 
