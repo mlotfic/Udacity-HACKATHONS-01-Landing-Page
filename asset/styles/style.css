@@ -1,9 +1,10 @@
 @import url("variables.css");
 @import url("slider.css");
 @import url("section.css");
+@import url("theme.css");
+@import url("navbar.css");
 @import url("mobile-menu.css");
 @import url("lightbox.css");
-@import url("navbar.css");
 @import url("home.css");
 @import url("portfolio.css");
 @import url("reviews.css");
