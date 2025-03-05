@@ -1,0 +1,119 @@
+:root {
+  /* Light Theme (Modern Photographer) */
+
+  /* Base Colors */
+  --primary-color: #2196F3; /* Vivid Blue */
+  --primary-hover: #1976D2;
+  --secondary-color: #FFC107; /* Amber */
+  --secondary-hover: #FFB300;
+  --accent-color: #00BCD4; /* Cyan */
+  --accent-color-rgb: 0, 188, 212; /* Corresponding RGB values */
+  --accent-hover: #0097A7;
+
+  /* Backgrounds */
+  --background-primary: #FFFFFF; /* Clean White */
+  --background-secondary: #F5F5F5; /* Soft Gray */
+  --card-bg: #FFFFFF;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --form-bg: #FFFFFF;
+
+  /* Text */
+  --text-primary: #212121; /* Dark Gray */
+  --text-secondary: #757575; /* Medium Gray */
+  --nav-text: #212121;
+  --button-text: #FFFFFF;
+
+  /* UI Elements */
+  --border-color: #E0E0E0; /* Light Gray */
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(0, 0, 0, 0.6); /* Darker Overlay */
+  --form-border: #BDBDBD;
+  --highlight-color: #FFEB3B; /* Yellow Highlight */
+
+  /* Transitions */
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease;
+}
+
+/* Dark Theme (Modern Dark Photographer) */
+[data-theme="dark"] {
+  /* Base Colors */
+  --primary-color: #90CAF9; /* Lighter Blue */
+  --primary-hover: #64B5F6;
+  --secondary-color: #FFCC80; /* Lighter Amber */
+  --secondary-hover: #FFB74D;
+  --accent-color: #80DEEA; /* Lighter Cyan */
+  --accent-hover: #4DD0E1;
+
+  /* Backgrounds */
+  --background-primary: #1E1E1E; /* Dark Gray */
+  --background-secondary: #212121; /* Darker Gray */
+  --card-bg: #212121;
+  --nav-bg: rgba(30, 30, 30, 0.95);
+  --form-bg: #212121;
+
+  /* Text */
+  --text-primary: #EEEEEE; /* Light Gray */
+  --text-secondary: #BDBDBD; /* Medium Gray */
+  --nav-text: #90CAF9;
+  --button-text: #212121;
+
+  /* UI Elements */
+  --border-color: #424242; /* Darker Gray */
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --overlay-bg: rgba(0, 0, 0, 0.8); /* Darker Overlay */
+  --form-border: #616161;
+  --highlight-color: #FFEE58; /* Yellow Highlight */
+}
+
+/* Typography */
+:root {
+  --font-family-primary: 'Poppins', sans-serif; /* Modern font */
+  --font-family-secondary: 'Open Sans', sans-serif;
+  --font-size-base: 16px;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+/* Spacing */
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+}
+
+/* Border Radius */
+:root {
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-pill: 20px;
+  --border-radius-circle: 50%;
+}
+
+/* Shadows */
+:root {
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Transitions */
+:root {
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease-in-out;
+}
+
+/* Z-index */
+:root {
+  --z-index-modal: 1000;
+  --z-index-dropdown: 900;
+  --z-index-sticky: 800;
+  --z-index-fixed: 700;
+  --z-index-default: 1;
+}

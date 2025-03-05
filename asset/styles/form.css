@@ -1,0 +1,220 @@
+/* Contact Form Styles */
+.contact-form {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--form-bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+}
+
+.form-container {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+/* Left Side Styles */
+.form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right Side Styles */
+.form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Labels */
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.form-group label i {
+  color: var(--accent-color);
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--form-border);
+  border-radius: var(--border-radius-md);
+  background: var(--background-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Message Textarea */
+.message-group {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-group textarea {
+  flex-grow: 1;
+  min-height: 200px;
+  resize: vertical;
+}
+
+/* Focus States */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.1);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: var(--accent-color);
+  color: var(--button-text);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  align-self: flex-end;
+}
+
+button[type="submit"]:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+button[type="submit"] i {
+  transition: transform 0.3s ease;
+}
+
+button[type="submit"]:hover i {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  .form-left,
+  .form-right {
+      width: 100%;
+  }
+
+  .message-group textarea {
+      min-height: 150px;
+  }
+
+  button[type="submit"] {
+      width: 100%;
+  }
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  background: var(--form-bg);
+  border-color: var(--form-border);
+}
+
+/* Optional: Animation on Form Load */
+.contact-form {
+  animation: formFadeIn 0.5s ease-out;
+}
+
+@keyframes formFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Optional: Input Validation Styles */
+.form-group input:invalid,
+.form-group textarea:invalid {
+  border-color: #90CAF9;
+}
+
+.form-group input:valid,
+.form-group textarea:valid {
+  border-color: #00C851;
+}
+
+
+/* Submit Button - Reduced Size */
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem; /* Reduced padding */
+  background: var(--accent-color);
+  color: var(--button-text);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem; /* Reduced gap */
+  transition: all 0.3s ease;
+  align-self: flex-end;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Button Icon */
+button[type="submit"] i {
+  font-size: 0.9rem; /* Smaller icon size */
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+button[type="submit"]:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:hover i {
+  transform: translateX(3px); /* Reduced movement */
+}
+
+/* Active State */
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  button[type="submit"] {
+      padding: 0.6rem 1rem; /* Even smaller on mobile */
+      font-size: 0.85rem;
+  }
+  
+  button[type="submit"] i {
+      font-size: 0.85rem;
+  }
+}

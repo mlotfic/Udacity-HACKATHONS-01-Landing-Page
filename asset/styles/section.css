@@ -1,0 +1,107 @@
+/* Section Headers */
+.section-header {
+    position: relative;
+    padding: 1em; /* Reduced padding */
+    overflow: hidden;
+    margin-bottom: 1em; /* Reduced margin */
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    min-height: 80px; /* Set minimum height */
+}
+
+/* Header Content Layout */
+.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal center alignment */
+    gap: 0.5em; /* Space between icon and text */
+    padding: 0.5em; /* Reduced padding */
+}
+
+/* Header Icon */
+.header-icon {
+    font-size: 1.5em; /* Slightly smaller icon */
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+/* Section Title */
+.highlight-text {
+    position: relative;
+    font-size: 1.8em; /* Slightly smaller text */
+    color: var(--text-primary);
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Bubble Animations - Adjusted positions for smaller header */
+.section-header::before {
+    width: 40px; /* Smaller bubbles */
+    height: 40px;
+    top: 50%;
+    left: 15%;
+}
+
+.section-header::after {
+    width: 30px;
+    height: 30px;
+    bottom: 10%;
+    right: 10%;
+}
+
+.section-header .bubble-1 {
+    width: 20px;
+    height: 20px;
+    top: 20%;
+    left: 30%;
+}
+
+.section-header .bubble-2 {
+    width: 25px;
+    height: 25px;
+    top: 40%;
+    left: 50%;
+}
+
+.section-header .bubble-3 {
+    width: 15px;
+    height: 15px;
+    top: 30%;
+    right: 25%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-header {
+        padding: 0.8em;
+        min-height: 60px;
+    }
+
+    .header-content {
+        padding: 0.3em;
+    }
+
+    .header-icon {
+        font-size: 1.2em;
+    }
+
+    .highlight-text {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-text {
+        font-size: 1.2em;
+    }
+
+    .header-icon {
+        font-size: 1em;
+    }
+}

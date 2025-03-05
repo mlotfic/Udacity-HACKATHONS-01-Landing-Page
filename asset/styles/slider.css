@@ -1,0 +1,198 @@
+/* Slider Styles */
+.hero .slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero .slide.active {
+  opacity: 1;
+}
+
+
+/* Slider Navigation */
+.hero .slider-nav {
+    position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+  
+  .hero .prev-slide,
+  .hero .next-slide {
+    background: none;
+      border: 2px solid var(--hieroglyph-color);
+      color: var(--hieroglyph-color);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+  }
+  
+  .hero .prev-slide:hover,
+  .hero .next-slide:hover {
+    background: var(--hieroglyph-color);
+    color: #fff;
+  }
+  
+  .hero .slide-dots {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .hero .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero .dot.active {
+    background: var(--hieroglyph-color);
+    transform: scale(1.2);
+  }
+
+
+/* Slider Container and Navigation */
+.reviews.section .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px; /* Add padding for navigation buttons */
+    overflow: hidden;
+}
+
+.reviews.section .slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+}
+
+
+/* Navigation Buttons */
+.reviews.section .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+
+.reviews.section .slider-nav.prev {
+    left: 0;
+}
+
+.reviews.section .slider-nav.next {
+    right: 0;
+}
+
+/* Button States */
+.reviews.section .slider-nav:not(:disabled):hover {
+    background: var(--accent-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.reviews.section .slider-nav:disabled {
+    background: var(--border-color);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Button Icons */
+.reviews.section .slider-nav i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Slider Track */
+.reviews.section .slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .reviews.section .slider-container {
+        padding: 0 40px; /* Smaller padding on mobile */
+    }
+
+    .reviews.section .slider-nav {
+        width: 35px;
+        height: 35px;
+    }
+
+    .reviews.section .slider-nav i {
+        font-size: 1rem;
+    }
+}
+
+.reviews.section .slider-nav:hover {
+    background: var(--accent-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Dots Navigation */
+.reviews.section .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.reviews.section .slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reviews.section .slider-dot.active {
+    background: var(--accent-color);
+    transform: scale(1.2);
+}
+
+
+

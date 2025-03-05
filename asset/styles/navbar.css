@@ -1,0 +1,308 @@
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--hieroglyph-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: var(--hieroglyph-color);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(360deg);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: 'Cinzel', serif;
+    transition: font-size 0.3s ease; /* Add transition */
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: gap 0.3s ease; /* Add transition */
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.8rem 1.2rem;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    
+}
+
+/* Active Link Styles */
+.nav-link.active {
+    color: var(--hieroglyph-color);
+    background: linear-gradient(
+        145deg,
+        rgba(var(--hieroglyph-color-rgb), 0.2),
+        rgba(var(--hieroglyph-color-rgb), 0.1)
+    );
+    font-weight: 600;
+    transform: translateY(-1px);
+    box-shadow: 
+        0 4px 12px -2px rgba(var(--hieroglyph-color-rgb), 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(var(--hieroglyph-color-rgb), 0.2);
+}
+
+/* Add a subtle animation on section change */
+.nav-link.active {
+    animation: highlightIn 0.3s ease-out;
+}
+
+@keyframes highlightIn {
+    from {
+        opacity: 0;
+        transform: translateY(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%; /* Inset from edges */
+    width: 90%; /* Slightly shorter than full width */
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--hieroglyph-color),
+        transparent
+    );
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        45deg,
+        rgba(var(--hieroglyph-color-rgb), 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(var(--hieroglyph-color-rgb), 0.1) 75%
+    );
+    background-size: 4px 4px;
+    border-radius: inherit;
+    opacity: 0.5;
+}
+
+.nav-link:hover {
+    color: var(--hieroglyph-color);
+    background: rgba(195, 147, 63, 0.1);
+}
+
+/* Hover effect */
+.nav-link:hover:not(.active) {
+    background: rgba(var(--hieroglyph-color-rgb), 0.1);
+    color: var(--hieroglyph-color);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .nav-link.active {
+    background: linear-gradient(
+        145deg,
+        rgba(var(--hieroglyph-color-rgb), 0.25),
+        rgba(var(--hieroglyph-color-rgb), 0.1)
+    );
+    box-shadow: 
+        0 4px 12px -2px rgba(var(--hieroglyph-color-rgb), 0.3),
+        inset 0 1px 2px rgba(255, 255, 255, 0.05);
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        width: 0;
+        left: 50%;
+        opacity: 0;
+    }
+    to {
+        width: 90%;
+        left: 5%;
+        opacity: 1;
+    }
+}
+
+/* Optional: Add icon animation */
+.nav-link.active i {
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.nav-link i {
+    transition: transform 0.3s ease;
+}
+
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--hieroglyph-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--hieroglyph-color);
+    transition: all 0.3s ease;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    background: var(--hieroglyph-color);
+    color: var(--background-primary);
+    transform: rotate(180deg);
+}
+
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
+}
+
+/* Responsive Navigation - Improved */
+@media (max-width: 992px) { /* Increased breakpoint for larger screens */
+    .navbar {
+        padding: 1rem; /* Reduced padding */
+    }
+
+    .nav-links {
+        gap: 1rem; /* Reduced gap */
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .logo-text {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .theme-toggle {
+        width: 35px; /* Smaller size */
+        height: 35px;
+        margin-left: 0.5rem; /* Reduced margin */
+    }
+
+    .theme-toggle i {
+        font-size: 1rem; /* Smaller icon size */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align to the left */
+        padding: 0.8rem 1rem; /* Further reduced padding */
+    }
+
+    .nav-controls {
+        width: 100%;
+        justify-content: space-between; /* Distribute space between toggle and links */
+        align-items: center;
+        margin-top: 0.5rem; /* Reduced margin */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Keep links horizontal */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: flex-start; /* Align links to the left */
+        gap: 0.5rem; /* Reduced gap */
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 0.8rem; /* Smaller font size */
+        padding: 0.4rem 0.8rem; /* Reduced padding */
+        border-radius: 3px; /* Smaller border radius */
+    }
+
+    .logo {
+        gap: 0.5rem; /* Reduced gap */
+    }
+
+    .logo-icon {
+        font-size: 1.5rem; /* Smaller icon size */
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Smaller font size */
+    }
+}
+

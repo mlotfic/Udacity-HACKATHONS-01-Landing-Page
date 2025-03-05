@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensLight Photography</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./asset/styles/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-ankh logo-icon"></i>
+            <span class="logo-text">LensLight</span>
+        </div>
+        <div class="nav-controls">
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-pyramid"></i> Home</a></li>
+                <li><a href="#portfolio" class="nav-link"><i class="fas fa-camera"></i> Portfolio</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-scroll"></i> About</a></li>
+                <li><a href="#reviews" class="nav-link"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-feather"></i> Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero section">
+        <!-- Slider Background -->
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('./asset/img/portfolio-01.jpg')"></div>
+            <div class="slide" style="background-image: url('./asset/img/portfolio-04.jpg')"></div>
+            <div class="slide" style="background-image: url('./asset/img/portfolio-07.jpg')"></div>
+        </div>
+        
+        <!-- Particle Effect -->
+        <div id="particles-js"></div>
+        
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Content -->
+        <div class="hero-content">
+            <div class="egyptian-border">
+                <div class="hieroglyph-decoration left"></div>
+                <div class="hieroglyph-decoration right"></div>
+                <h1><i class="fas fa-sun"></i> Welcome to LensLight Photography</h1>
+                <p>Capturing Timeless Moments Like Ancient Hieroglyphs</p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="cta-button">
+                        <span>View Portfolio</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="cta-button secondary">
+                        <span>Contact Me</span>
+                        <i class="fas fa-feather"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+            <button class="prev-slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slide-dots"></div>
+            <button class="next-slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="section-header">
+            <div class="landing__container">
+                <div class="header-content">  
+                    <i class="fas fa-camera header-icon"> Portfolio Gallery</i> 
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Portfolio Items -->
+            <div class="portfolio-item">
+                <img src="./asset/img/portfolio-01.jpg" alt="Sunset in Paris" class="portfolio-image">
+                <div class="overlay">
+                    <p>Sunset in Paris</p>
+                </div>
+            </div>
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item">
+                <img src="./asset/img/portfolio-02.jpg" alt="Portfolio 2">
+                <div class="overlay">
+                    <p>Wedding at Central Park</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item">
+                <img src="./asset/img/portfolio-03.jpg" alt="Portfolio 3">
+                <div class="overlay">
+                    <p>Mountain Landscapes</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-04.jpg" alt="Portfolio 4">
+                <div class="overlay">
+                    <p>Urban Architecture</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-05.jpg" alt="Portfolio 5">
+                <div class="overlay">
+                    <p>Portrait Photography</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-06.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 7 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-07.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 8 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-08.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 9 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-09.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 10 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-10.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 11 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-11.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 12 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-12.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 13 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-13.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 14 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-14.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 15 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-15.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 16 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-16.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 17 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-17.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 18 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-18.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 19 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-19.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 20 -->
+            <div class="portfolio-item">
+                <img src="./asset//img/portfolio-20.jpg" alt="Portfolio 6">
+                <div class="overlay">
+                    <p>Nature Close-ups</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="section-header">
+            <div class="landing__container">
+                <div class="header-content">
+                    <i class="fas fa-scroll header-icon">  About the Artist</i>
+                </div>
+            </div>
+        </div>
+        <div class="about-content">
+            <div class="profile-container">
+                <div class="egyptian-frame">
+                    <img src="./asset/img/owner.jpg" alt="Photographer" class="profile-img">
+                </div>
+            </div>
+            <div class="about-text">
+                <div class="papyrus-scroll">
+                    <p><span class="dropcap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews section">
+        <div class="landing__container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="header-content">
+                    <i class="fas fa-star header-icon"> Client Testimonials</i>
+                </div>
+            </div>
+
+            <!-- Slider Component -->
+            <div class="slider-container">
+                <!-- Slider Navigation -->
+                <button class="slider-nav prev" id="prevSlide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-nav next" id="nextSlide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Slider Track -->
+                <div class="slider-track">
+                    <!-- Review Cards Client 1 -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-01.jpg" alt="Client 1" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                        <p class="reviewer-name">Emma Thompson</p>
+                        <span class="review-type">Wedding Photography</span>
+                    </div>
+
+                    <!-- Review 2 - 4.5 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-02.jpg" alt="Client 2" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                        <p class="reviewer-name">James Wilson</p>
+                        <span class="review-type">Corporate Event</span>
+                    </div>
+
+                    <!-- Review 3 - 5 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-f-01.jpg" alt="Client 3" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                        <p class="reviewer-name">Sophia Chen</p>
+                        <span class="review-type">Family Portrait</span>
+                    </div>
+
+                    <!-- Review 4 - 4 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-f-02.jpg" alt="Client 4" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            
+                        </div>
+                        <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                        <p class="reviewer-name">Emma Thompson</p>
+                        <span class="review-type">Wedding Photography</span>
+                    </div>
+
+                    <!-- Review 5 - 5 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-03.jpg" alt="Client 5" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."</p>
+                        <p class="reviewer-name">Isabella Garcia</p>
+                        <span class="review-type">Fashion Shoot</span>
+                    </div>
+
+                    <!-- Review 6 - 4.5 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-04.jpg" alt="Client 6" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur."</p>
+                        <p class="reviewer-name">Oliver Taylor</p>
+                        <span class="review-type">Event Coverage</span>
+                    </div>
+
+                    <!-- Review 7 - 5 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/user-f-03.jpg" alt="Client 7" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum."</p>
+                        <p class="reviewer-name">Ava Martinez</p>
+                        <span class="review-type">Portrait Session</span>
+                    </div>
+
+                    <!-- Review 8 - 4 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/logo-01.jpg" alt="Client 8" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            
+                        </div>
+                        <p class="review-text">"Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis."</p>
+                        <p class="reviewer-name">Lucas Anderson</p>
+                        <span class="review-type">Real Estate Photos</span>
+                    </div>
+
+                    <!-- Review 9 - 4.5 Stars -->
+                    <div class="review-card">
+                        <img src="./asset//img/map-01.jpg" alt="Client 9" class="reviewer-img">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates."</p>
+                        <p class="reviewer-name">Mia Johnson</p>
+                        <span class="review-type">Graduation Photos</span>
+                    </div>
+
+                </div>
+
+                <!-- Slider Dots -->
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="section-header">
+            <div class="landing__container">
+                <div class="header-content">
+                    <i class="fas fa-feather header-icon"> Send a Message</i>
+                </div>
+            </div>
+        </div>
+        <form class="contact-form egyptian-frame">
+            <div class="form-container">
+                <!-- Left Side -->
+                <div class="form-left">
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Name:
+                        </label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email:
+                        </label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+        
+                <!-- Right Side -->
+                <div class="form-right">
+                    <div class="form-group message-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i> Message:
+                        </label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <br>
+
+    <!-- Footer -->
+    <footer class="egyptian-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <i class="fas fa-ankh"></i>
+                    <span>LensLight Photography</span>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a> <!-- Updated icon -->
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 LensLight Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal-lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="modalImage" class="modal-content-lightbox">
+        <div id="imageCaption" class="caption-lightbox"></div>
+        <button class="nav-btn prev-btn" onclick="changeImage(-1)">❮</button>
+        <button class="nav-btn next-btn" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./asset/scripts/main.js"></script>
+</body>
+</html>
