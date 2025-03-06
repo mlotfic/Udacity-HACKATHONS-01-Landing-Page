@@ -78,120 +78,90 @@
   }
 
 
-/* Slider Container and Navigation */
-.reviews.section .slider-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 50px; /* Add padding for navigation buttons */
+  .slider-wrapper {
     overflow: hidden;
-}
-
-.reviews.section .slider-track {
+    max-width: 1200px;
+    margin: 0 70px 55px;
+  }
+  
+  .card-list .card-item {
+    height: auto;
+    user-select: none;
+    padding: 35px;
     display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
-    padding: 10px;
-}
-
-
-/* Navigation Buttons */
-.reviews.section .slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--accent-color);
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 2;
-}
-
-
-.reviews.section .slider-nav.prev {
-    left: 5px;
-}
-
-.reviews.section .slider-nav.next {
-    right: 5px;
-}
-
-/* Button States */
-.reviews.section .slider-nav:not(:disabled):hover {
-    background: var(--accent-hover);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.reviews.section .slider-nav:disabled {
-    background: var(--border-color);
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-/* Button Icons */
-.reviews.section .slider-nav i {
-    font-size: 1.2rem;
-    color: #fff;
-}
-
-/* Slider Track */
-.reviews.section .slider-track {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .reviews.section .slider-container {
-        padding: 0 40px; /* Smaller padding on mobile */
-    }
-
-    .reviews.section .slider-nav {
-        width: 35px;
-        height: 35px;
-    }
-
-    .reviews.section .slider-nav i {
-        font-size: 1rem;
-    }
-}
-
-.reviews.section .slider-nav:hover {
-    background: var(--accent-hover);
-    transform: translateY(-50%) scale(1.1);
-}
-
-/* Dots Navigation */
-.reviews.section .slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
-}
-
-.reviews.section .slider-dot {
-    width: 8px;
-    height: 8px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: #ffffff33;
+    border: 1px solid #ffffff80;
+  }
+  
+  .card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    background: var(--border-color);
+    margin-bottom: 40px;
+    border: 4px solid #3754b1;
+    padding: 4px;
+  }
+  .card-list .card-item .user-name{
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .card-list .card-item .user-profession {
+    font-size: 16px;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0 40px;
+  }
+  
+  .card-list .card-item .message-button {
+    font-size: 16px;
+    padding: 10px 35px;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.reviews.section .slider-dot.active {
-    background: var(--accent-color);
-    transform: scale(1.2);
-}
-
-
+    background: #3754b1;
+    border: 2px solid transparent;
+    transition: 0.5s;
+  }
+  
+  .card-list .card-item .message-button:hover {
+    background: #ffffff1a;
+    border: 2px solid #fff;
+    color: #3754b1;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+  .slider-wrapper .swiper-slide-button {
+    color: #3754b1;
+    margin-top: -55px;
+    transition: 0.5s;
+  }
+  
+  .slider-wrapper .swiper-slide-button:hover {
+    color: #50011b;
+  }
+  
+  @media (max-width: 768px) {
+    .slider-wrapper {
+      margin: 0 20px 40px;
+      padding: 0 30px;
+    }
+  }
 

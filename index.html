@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
     
     <!-- External CSS -->
+     <!-- Linking SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -300,20 +302,12 @@
             </div>
 
             <!-- Slider Component -->
-            <div class="slider-container">
-                <!-- Slider Navigation -->
-                <button class="slider-nav prev" id="prevSlide">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slider-nav next" id="nextSlide">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
+            <div class="slider-wrapper">
                 <!-- Slider Track -->
-                <div class="slider-track">
+                <div class="card-list swiper-wrapper">
                     <!-- Review Cards Client 1 -->
-                    <div class="review-card">
-                        <img src="./asset//img/user-01.jpg" alt="Client 1" class="reviewer-img">
+                    <div class="card-item swiper-slide">
+                        <img decoding="async" src="./asset//img/user-01.jpg" alt="Client 1" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -327,8 +321,8 @@
                     </div>
 
                     <!-- Review 2 - 4.5 Stars -->
-                    <div class="review-card">
-                        <img src="./asset//img/user-02.jpg" alt="Client 2" class="reviewer-img">
+                    <div class="card-item swiper-slide">
+                        <img decoding="async" src="./asset//img/user-02.jpg" alt="Client 2" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -342,8 +336,8 @@
                     </div>
 
                     <!-- Review 3 - 5 Stars -->
-                    <div class="review-card">
-                        <img src="./asset//img/user-f-01.jpg" alt="Client 3" class="reviewer-img">
+                    <div class="card-item swiper-slide">
+                        <img decoding="async" src="./asset//img/user-f-01.jpg" alt="Client 3" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -357,8 +351,8 @@
                     </div>
 
                     <!-- Review 4 - 4 Stars -->
-                    <div class="review-card">
-                        <img src="./asset//img/user-f-02.jpg" alt="Client 4" class="reviewer-img">
+                    <div class="card-item swiper-slide">
+                        <img decoding="async" src="./asset//img/user-f-02.jpg" alt="Client 4" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -372,7 +366,7 @@
                     </div>
 
                     <!-- Review 5 - 5 Stars -->
-                    <div class="review-card">
+                    <div class="card-item swiper-slide">
                         <img src="./asset//img/user-03.jpg" alt="Client 5" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -387,7 +381,7 @@
                     </div>
 
                     <!-- Review 6 - 4.5 Stars -->
-                    <div class="review-card">
+                    <div class="card-item swiper-slide">
                         <img src="./asset//img/user-04.jpg" alt="Client 6" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -402,7 +396,7 @@
                     </div>
 
                     <!-- Review 7 - 5 Stars -->
-                    <div class="review-card">
+                    <div class="card-item swiper-slide">
                         <img src="./asset//img/user-f-03.jpg" alt="Client 7" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -417,7 +411,7 @@
                     </div>
 
                     <!-- Review 8 - 4 Stars -->
-                    <div class="review-card">
+                    <div class="card-item swiper-slide">
                         <img src="./asset//img/logo-01.jpg" alt="Client 8" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -432,7 +426,7 @@
                     </div>
 
                     <!-- Review 9 - 4.5 Stars -->
-                    <div class="review-card">
+                    <div class="card-item swiper-slide">
                         <img src="./asset//img/map-01.jpg" alt="Client 9" class="reviewer-img">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -448,8 +442,9 @@
 
                 </div>
 
-                <!-- Slider Dots -->
-                <div class="slider-dots"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -539,6 +534,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./asset/scripts/main.js"></script>

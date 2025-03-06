@@ -1,12 +1,12 @@
 // Reviews Slider Function
 function initReviewSlider() {
     // DOM Elements
-    const container = document.querySelector('.hero .slider-container');
+    const container = document.querySelector('#reviews .slider-container');
     const track = document.querySelector('.slider-track');
     const slides = Array.from(document.querySelectorAll('.review-card'));
     const prevBtn = document.getElementById('prevSlide');
     const nextBtn = document.getElementById('nextSlide');
-    const dotsContainer = document.querySelector('.slider-dots');
+    const dotsContainer = document.querySelector('#reviews .slider-dots');
     
     // State
     let currentIndex = 0;
@@ -15,13 +15,14 @@ function initReviewSlider() {
 
     // Get number of slides per view based on screen width
     function getSlidesPerView() {
-        if (window.innerWidth > 992) return 3;
-        if (window.innerWidth > 768) return 2;
+        if (window.innerWidth > 1200) return 3;
+        if (window.innerWidth > 992) return 2;
         return 1;
     }
 
     // Create navigation dots
     function createDots() {
+        dotsContainer.innerHTML = ''; // Clear existing dots
         const totalDots = Math.ceil(totalSlides / slidesPerView);
         
         for (let i = 0; i < totalDots; i++) {
@@ -58,6 +59,11 @@ function initReviewSlider() {
         const slideWidth = slides[0].offsetWidth + 20; // Include gap
         const offset = -currentIndex * slideWidth;
         track.style.transform = `translateX(${offset}px)`;
+
+        // Center reviews between navigation buttons
+        const containerWidth = container.offsetWidth;
+        const trackWidth = slidesPerView * slideWidth;
+        track.style.left = `${(containerWidth - trackWidth) / 2}px`;
     }
 
     // Update dot indicators
@@ -74,81 +80,24 @@ function initReviewSlider() {
     function updateButtons() {
         prevBtn.disabled = currentIndex === 0;
         nextBtn.disabled = currentIndex >= totalSlides - slidesPerView;
-        
-        // Update button opacity based on state
-        prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-        nextBtn.style.opacity = currentIndex >= totalSlides - slidesPerView ? '0.5' : '1';
     }
 
     // Handle window resize
     function handleResize() {
         slidesPerView = getSlidesPerView();
         currentIndex = Math.min(currentIndex, totalSlides - slidesPerView);
+        createDots(); // Recreate dots when slide count changes
         updateSliderPosition();
         updateDots();
         updateButtons();
     }
 
-    // Add touch support
-    function initTouchSupport() {
-        let startX, moveX;
-        const threshold = 50; // minimum distance for swipe
-
-        track.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        track.addEventListener('touchmove', (e) => {
-            if (!startX) return;
-            moveX = e.touches[0].clientX;
-            const diff = moveX - startX;
-            
-            // Prevent scrolling while swiping
-            if (Math.abs(diff) > 10) {
-                e.preventDefault();
-            }
-        });
-
-        track.addEventListener('touchend', (e) => {
-            if (!startX || !moveX) return;
-            
-            const diff = moveX - startX;
-            if (Math.abs(diff) > threshold) {
-                if (diff > 0) {
-                    slide('prev');
-                } else {
-                    slide('next');
-                }
-            }
-            
-            startX = null;
-            moveX = null;
-        });
-    }
-
-    // Add keyboard support
-    function initKeyboardSupport() {
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                slide('prev');
-            } else if (e.key === 'ArrowRight') {
-                slide('next');
-            }
-        });
-    }
-
     // Initialize slider
     function init() {
         createDots();
-        
-        // Add event listeners
         prevBtn.addEventListener('click', () => slide('prev'));
         nextBtn.addEventListener('click', () => slide('next'));
         window.addEventListener('resize', handleResize);
-        
-        // Initialize touch and keyboard support
-        initTouchSupport();
-        initKeyboardSupport();
         
         // Initial setup
         updateSliderPosition();
@@ -156,9 +105,9 @@ function initReviewSlider() {
         updateButtons();
     }
 
-    // Initialize the slider
     init();
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // ===============================
@@ -175,7 +124,39 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeParticles();
     }
 
-    initReviewSlider();
+    //initReviewSlider();
+
+    const swiper = new Swiper('.slider-wrapper', {
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 30,
+      
+        // Pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true
+        },
+      
+        // Navigation
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // Responsive
+        breakpoints: {
+          0: {
+            slidesPerView: 1
+          },
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        }
+      });
 
     // Slider Elements
     const slides = document.querySelectorAll('.slide');
